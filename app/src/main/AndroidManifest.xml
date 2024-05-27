@@ -13,6 +13,16 @@
         android:theme="@style/Theme.Projekterbaru1"
         tools:targetApi="31">
         <activity
+            android:name=".FavProductActivity"
+            android:exported="false"
+            android:label="@string/title_activity_fav_product"
+            android:theme="@style/Theme.Projekterbaru1" />
+        <activity
+            android:name=".DetailProductActivity"
+            android:exported="false"
+            android:label="@string/title_activity_detail_product"
+            android:theme="@style/Theme.Projekterbaru1" />
+        <activity
             android:name=".FlashSaleActivity"
             android:exported="false"
             android:label="@string/title_activity_flash_sale"

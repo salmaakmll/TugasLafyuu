@@ -11,11 +11,6 @@ import androidx.fragment.app.Fragment
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [Home.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Home : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
@@ -32,21 +27,26 @@ class Home : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Menginisialisasi ImageView dan Button
+        // Menginisialisasi ImageView dan menambahkan OnClickListener
         val splashImageView1 = view.findViewById<ImageView>(R.id.imageView3)
         splashImageView1.setOnClickListener {
-            // Tindakan yang ingin dilakukan saat gambar diklik
-            // Misalnya, pindah ke aktivitas lain
             val intent = Intent(requireContext(), FlashSaleActivity::class.java)
             startActivity(intent)
         }
+
+        val splashImageView2 = view.findViewById<ImageView>(R.id.imageView13)
+        splashImageView2.setOnClickListener {
+            val intent = Intent(requireContext(), FavProductActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Bagian lain dari onViewCreated Anda
     }
 
     companion object {
